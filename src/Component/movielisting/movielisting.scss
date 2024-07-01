@@ -1,0 +1,32 @@
+@import "../../common/colors.scss";
+
+.movie-list{
+    margin: 20px 0px;
+
+    h2{
+        color: $font-secondary;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+}
+.movie-container {
+    .slick-slide {
+      padding: 0 10px; // Adding gap between slides
+    }
+    
+    .slick-list {
+      margin: 0 -10px; // Adjusting for the padding
+    }
+  }
+
+.shows-list{
+    margin: 20px 0px;
+
+    h2{
+        color: $font-secondary;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+}
