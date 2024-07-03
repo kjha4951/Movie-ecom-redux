@@ -36,8 +36,8 @@ const Movielisting = () => {
   };
   const movies = useSelector(getAllmovies);
   const shows = useSelector(getAllshows);
-  
-  let rendermovies,renderShows  = "";
+
+  let rendermovies, renderShows = "";
 
   rendermovies =
     movies.Response === "True" ? (
@@ -45,48 +45,39 @@ const Movielisting = () => {
         <Moviecard key={index} data={movie} />
       ))
     ) : (
-      <div className='movies-error'>
-        <h3>{movies.Error}</h3>
+      <div className="movies-error">
+        <h3 className="error-message">{movies.Error}</h3>
       </div>
     );
 
-   
-
-    renderShows =
+  renderShows =
     shows.Response === "True" ? (
       shows.Search.map((movie, index) => <Moviecard key={index} data={movie} />)
     ) : (
       <div className="shows-error">
-        <h3>{shows.Error}</h3>
+        <h3 className="error-message">{shows.Error}</h3>
       </div>
     );
 
   return (
     <div className="movie-wrapper">
       <>
-      <div className="movie-list">
-        <h2>Movies</h2>
-        <div className="movie-container">
-          
-          <Slider {...settings} >
-          {rendermovies}
-          </Slider>
+        <div className="movie-list">
+          <h2>Movies</h2>
+          <div className="movie-container movie-card">
+            <Slider {...settings}>{rendermovies}</Slider>
           </div>
-
-      </div>
-      <div className="shows-list">
-        <h2>Shows</h2>
-       
-        <div className="movie-container">
-        <Slider {...settings}>
-          {renderShows}
-          </Slider>
+        </div>
+        <div className="shows-list">
+          <h2>Shows</h2>
+          <div className="movie-container movie-card">
+            <Slider {...settings}>{renderShows}</Slider>
           </div>
-      </div>
+        </div>
       </>
     </div>
-  )
-}
+  );
+};
 
 export default Movielisting
 

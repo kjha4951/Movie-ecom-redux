@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Moviecard = (props) => {
   const {data} = props
   return (
-    <div className="card-item">
+    <div className="card-item card-items">
       <Link to={`/movie/${data.imdbID}`}>
       <div className="card-inner">
         <div className="card-top">

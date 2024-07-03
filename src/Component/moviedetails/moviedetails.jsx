@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllshowsDetails, removeAsyncShowsMoviesDetails } from '../../features/movie/movieslice';
 import { fetchAsyncShowsMoviesDetails } from '../../features/movie/movieslice';
 import './moviedetails.scss';
+import image from '../header/images/Load.gif'
 
 
 const Moviedetails = () => {
@@ -24,7 +25,9 @@ const Moviedetails = () => {
     <div className="movie-section">
       
         {Object.keys(data).length === 0?
-      (<div ><p>..... Loading</p></div>) :(
+      (<div className="loading"><img  style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '350px' , marginLeft:'550px', marginBottom:'300px', marginRight:'450px' ,width:"270px"}} src={image} alt="...Loading" /></div>) :(
+
+       
     
       <>
     

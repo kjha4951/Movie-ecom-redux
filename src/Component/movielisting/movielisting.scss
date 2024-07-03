@@ -12,11 +12,11 @@
 }
 .movie-container {
     .slick-slide {
-      padding: 0 10px; // Adding gap between slides
+      padding: 0 10px; 
     }
     
     .slick-list {
-      margin: 0 -10px; // Adjusting for the padding
+      margin: 0 -10px; 
     }
   }
 
@@ -29,4 +29,24 @@
         font-weight: 400;
     }
 
+}
+
+
+
+.movie-card {
+  
+  background-color:$primary-color;
+  // border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }

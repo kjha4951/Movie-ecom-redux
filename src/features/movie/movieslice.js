@@ -36,6 +36,7 @@ const initialState = {
     movies: {},
     shows: {},
     showsmovies: {},
+    
    
 }
 
